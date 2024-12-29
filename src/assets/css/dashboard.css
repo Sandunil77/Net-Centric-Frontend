@@ -1,0 +1,29 @@
+.dashboard-main-container {
+  height: 100%;
+  width: 100%;
+}
+
+.dashboard-main-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  width: 100%;
+}
+
+.dashboard-left {
+  background-color: #f5f5f5;
+  height: 100vh;
+  width: 30vh;
+
+}
+
+.dashboard-right {
+  flex: 1;
+  padding: 30px 30px;
+}
+
+.dashboard-right-summary{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
