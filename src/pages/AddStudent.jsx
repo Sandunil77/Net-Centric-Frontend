@@ -102,6 +102,8 @@ function AddStudent() {
         <div className='addstudent-left'>
           <SlideBar />
         </div>
+
+
         <div className='addstudent-right'>
           <div>
             <h1>Add Edit Student</h1>
@@ -109,10 +111,13 @@ function AddStudent() {
           <div className='addstudent-right-sub-topic'>
             <div> <h2>Student Details</h2></div>
           </div>
+
+
           <div>
             <form onSubmit={handleSubmit}>
               <div className='form-main-content'>
                 <div className='input-main-container'>
+                  
                   <div className='input-sub-container'>
                     <label htmlFor='username'>Student Name:</label>
                     <input id='name' name='name' type='text'
@@ -121,23 +126,34 @@ function AddStudent() {
                       value={ student?.name || ""}
                     ></input>
                   </div>
-                  <div className='input-sub-container'>
-                    <label htmlFor='birthdate'>Student BirthDate:</label>
-                    <DatePicker
-                      id='birthdate'
-                      name='dob'
-                      selected={student ? new Date(student.dob) : null}
-                      onChange={handleDateChange}
-                      dateFormat={"yyyy-MM-dd"}
-                      minDate={new Date(1900, 0, 1)}
-                      maxDate={new Date()}
-                      showYearDropdown
-                      scrollableYearDropdown
-                      placeholderText='Select a date'
-                    />
-                  </div>
-                </div>
+
+                  
+                  
+                </div> 
                 <div className='input-main-container'>
+                <div className='input-sub-container'>
+                    <label htmlFor='email'>Student Email:</label>
+                    <input id='email' name='email' type='email'
+                      onChange={handleChange}
+                      placeholder="Enter student email"
+                      value={student ? student.email : ''}
+                    ></input>
+                  </div>
+
+                </div>
+
+              
+                <div className='input-main-container'>
+
+
+                  <div className='input-sub-container'>
+                    <label htmlFor='birthdate'>Student Birthdate:</label>
+                    <input id='dob' name='dob' type='date'
+                      onChange={handleChange}
+                      value={student?.dob || ''}></input>
+                    
+                  </div>
+                  
                   <div className='input-sub-container'>
                     <label htmlFor='gpa'>Student GPA:</label>
                     <input id='gpa' name='gpa' type='number' step='0.01' value={ student?.gpa || ''}
@@ -145,7 +161,13 @@ function AddStudent() {
                       placeholder="Enter GPA (e.g., 3.5)"
                     />
                   </div>
-                  <div className='input-sub-container'>
+
+                  
+
+                </div>
+                <div className='input-main-container'>
+
+                <div className='input-sub-container'>
                     <label htmlFor="gender">Gender:</label>
                     <select
                       id="gender"
@@ -158,19 +180,9 @@ function AddStudent() {
                       <option value="female">Female</option>
                     </select>
                   </div>
-                </div>
-                <div className='input-main-container'>
-                  <div className='input-sub-container'>
-                    <label htmlFor="email">Email:</label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={student ? student.email : ''}
-                      onChange={handleChange}
-                      placeholder="Enter student email"
-                    />
-                  </div>
+                  
+                  
+                  
                   <div></div>
                 </div>
               </div>
@@ -182,6 +194,8 @@ function AddStudent() {
               </div>
             </form>
           </div>
+
+
         </div>
       </div>
     </div>

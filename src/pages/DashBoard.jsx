@@ -43,11 +43,11 @@ function DashBoard() {
                     <div>
                         <h1>DashBoard</h1>
                     </div>
-                    <div className='dashboard-right-summary'>
+                    {/* <div className='dashboard-right-summary'>
                         <div>Total count</div>
                         <div>Male count</div>
                         <div>Female count</div>
-                    </div>
+                    </div> */}
                     <div className='adminstudent-right-sub-topic'>
                         <div> <h2>Student List</h2></div>
                     </div>

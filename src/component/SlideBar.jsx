@@ -7,7 +7,7 @@ function SlideBar() {
     return (
         <div className='slidebar-main-container'>
             <div className='sliderbar-main-warper'>
-                <div className='sub_topic' onClick={() => navigate  ('/')}>DashBoard</div>
+                <div className='sub_topic font' onClick={() => navigate  ('/')}>DashBoard</div>
                 <div className='sub_topic' onClick={() => navigate  ('/adminStudent')}>Manage Student</div>
             </div>
         </div>
